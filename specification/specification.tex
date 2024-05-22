@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{blindtext}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{verbatim}
+\usepackage{amsmath}
+
+\title{Common Application Settings Interface}
+\author{Studievereniging Sticky, MrFriendly B.V.}
+\date{2024\\Version 1.0.0}
+
+\geometry{
+    a4paper,
+    left=15mm,
+    right=15mm,
+    top=15mm,
+    bottom=15mm
+}
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph} {\normalfont\normalsize\bfseries } {\theparagraph} {1em} {}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+
+    \section{Goal}
+    \label{sec:goal}
+
+    This specification describes a format for applications to retrieve
+    settings from other applications in a standardized way.
+    This allows applications to communicate with each other, and more importently,
+    configure themselves to suit other applications.
+
+    \subsection{Example: Scope managment}
+    \label{subsec:example-scope-managment}
+
+    A good example of when such a common interface is useful is
+    authorization.
+    An OAuth2 server can authorize a client to use specific scopes.
+    But, to know about the scopes of the applications behind the OAuth2 application
+    would require manual configuration.
+    A standardized way of retrieving the list of available scopes would help in this situation.
+
+    \subsection{Example: Settings page}
+    \label{subsec:example-settings-page}
+
+    Another good application is a common settings page.
+    An application usually has some configuration parameters.
+    One could build a settings page per application.
+    But, better would be one settings page for all application.
+    This specification describes methods for retrieving and setting such
+    settings, allowing for one common page for everything.
+
+    \section{Components}
+    \label{sec:components}
+
+    The common application settings interface (CASI) has multiple components to it:
+    \begin{enumerate}
+        \item General application information
+        \item Supported scopes
+        \item Application settings
+        \item Deletion of user data (AVG)
+    \end{enumerate}
+
+    \section{General application information}
+    \label{sec:general-application-information}
+    \input{./tex/general_application_information}
+
+    \section{Supported scopes}
+    \label{sec:supported-scopes}
+    \input{./tex/supported_scopes}
+
+    \section{Application settings}
+    \label{sec:application-settings}
+    \include{./tex/application_settings}
+\end{document}

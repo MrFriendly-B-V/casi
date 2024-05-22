@@ -1,0 +1,52 @@
+This set of endpoints allows other applications to configure application settings
+
+\subsection{List of available settings}
+\label{subsec:list-of-available-settings}
+
+\subsubsection{Request}
+A HTTP GET request should be executed.
+The path for this endpoint is configured in the general application infromation document.
+
+\subsubsection{Response}
+
+The $type$ value is one of:
+\begin{equation}
+    \label{eq:response-list-of-available-settings}
+    \text{Type} = \{uint32, int32, uint64, int64, bool, String\}
+\end{equation}
+Types can be annoted with $?$, e.g.\ $uint32?$, can be null.
+
+\verbatiminput{responses/200_ok}
+\verbatiminput{responses/available_settings.json}
+
+\subsection{Get settings value}
+\label{subsec:get-settings-value}
+
+\subsubsection{Request}
+
+A HTTP GET request should be executed.
+This endpoint is protect using an OAuth2 access token.
+The $key$ query parameter should be one of the available settings returned in section\ \ref{subsec:list-of-available-settings}
+
+\verbatiminput{requests/get_settings_value}
+
+\subsubsection{Response}
+
+\verbatiminput{responses/200_ok}
+\verbatiminput{responses/get_settings_value.json}
+
+\subsection{Set settings value}
+\label{subsec:set-settings-value}
+
+\subsubsection{Request}
+
+A HTTP GET request should be executed.
+This endpoint is protect using an OAuth2 access token.
+
+\verbatiminput{requests/post_with_authentication}
+\verbatiminput{requests/set_settings_value.json}
+
+\subsubsection{Response}
+
+\verbatiminput{responses/200_ok}
+\verbatiminput{responses/set_settings_value.json}

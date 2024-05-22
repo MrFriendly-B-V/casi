@@ -1,0 +1,2 @@
+GET <path>?key=<key>
+Authorization: Bearer <token>

@@ -1,0 +1,8 @@
+{
+  "available_settings": [
+    {
+      "key": "foo",
+      "type": "uint32"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "casi_version": "1.0.0",
+  "application_version": "3.8.5",
+  "endpoints": {
+    "supported_scopes": "https://example.com/supported_scopes",
+    "available_settings": "https://example.com/settings/list",
+    "get_setting_value": "https:/example.com/settings/setting",
+    "post_setting_value": "https:/example.com/settings/setting"
+  }
+}

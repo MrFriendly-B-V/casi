@@ -1,0 +1,21 @@
+The general application information interface is an endpoint
+returning a JSON document containing information about the application.
+This interface may be at any HTTP path.
+This path is known as the CASI path.
+
+\subsection{Request}
+\label{subsec:request-general-application-information}
+
+A HTTP GET request should be executed.
+The path for this endpoint may be determined by the application itself.
+
+\subsection{Response}
+\label{subsec:response-general-application-information}
+
+\begin{itemize}
+    \item The $case\_version$ value must be the version of the CASI specification the application is compliant with.
+    \item The $application\_version$ value must be semver\footnote{https://doc.rust-lang.org/cargo/reference/semver.html} comptabile.
+\end{itemize}
+
+\verbatiminput{responses/200_ok}
+\verbatiminput{responses/general_application_information.json}

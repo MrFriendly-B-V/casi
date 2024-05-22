@@ -1,0 +1,8 @@
+{
+  "supported_scopes": [
+    {
+      "name": "com.example.foo",
+      "description": "Grants access to Foo"
+    }
+  ]
+}
