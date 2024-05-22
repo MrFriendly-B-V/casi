@@ -1,0 +1,22 @@
+This endpoint is used to delete the data of a specific user, making an application easily AVG compliant.
+
+\subsection{Request}
+\label{subsec:request-delete-user-data}
+
+A HTTP POST request should be executed.
+This endpoint is protect using an OAuth2 access token.
+
+The application must ensure that the authenticated user is:
+\begin{itemize}
+    \item deleting themselves, should always be allowed
+    \item deleting another user, should only be allowed for admins
+\end{itemize}
+
+\verbatiminput{requests/post_with_authentication}
+\verbatiminput{requests/delete_user_data.json}
+
+\subsection{Response}
+\label{subsec:response-delete-user-data}
+
+\verbatiminput{responses/200_ok}
+\verbatiminput{responses/delete_user_data.json}

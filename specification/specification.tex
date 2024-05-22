@@ -8,10 +8,6 @@
 \usepackage{verbatim}
 \usepackage{amsmath}
 
-\title{Common Application Settings Interface}
-\author{Studievereniging Sticky, MrFriendly B.V.}
-\date{2024\\Version 1.0.0}
-
 \geometry{
     a4paper,
     left=15mm,
@@ -20,13 +16,19 @@
     bottom=15mm
 }
 
-\setcounter{secnumdepth}{4}
-\titleformat{\paragraph} {\normalfont\normalsize\bfseries } {\theparagraph} {1em} {}
-\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\pagestyle{headings}
 
 \begin{document}
-    \maketitle
-    \tableofcontents
+    \begin{titlepage}
+        \title{Common Application Settings Interface}
+        \author{Studievereniging Sticky, MrFriendly B.V.}
+        \date{2024\\Version 1.0.0}
+
+        \maketitle
+        \tableofcontents
+
+        \pagebreak
+    \end{titlepage}
 
     \section{Goal}
     \label{sec:goal}
@@ -77,5 +79,10 @@
 
     \section{Application settings}
     \label{sec:application-settings}
-    \include{./tex/application_settings}
+    \input{./tex/application_settings}
+
+    \section{Deletion of user data}
+    \label{sec:deletion-of-user-data}
+    \input{./tex/delete_user_data}
+
 \end{document}

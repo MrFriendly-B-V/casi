@@ -5,7 +5,10 @@ This set of endpoints allows other applications to configure application setting
 
 \subsubsection{Request}
 A HTTP GET request should be executed.
+This endpoint is protect using an OAuth2 access token.
 The path for this endpoint is configured in the general application infromation document.
+
+\verbatiminput{requests/get_available_settings}
 
 \subsubsection{Response}
 
@@ -40,7 +43,7 @@ The $key$ query parameter should be one of the available settings returned in se
 
 \subsubsection{Request}
 
-A HTTP GET request should be executed.
+A HTTP POST request should be executed.
 This endpoint is protect using an OAuth2 access token.
 
 \verbatiminput{requests/post_with_authentication}
